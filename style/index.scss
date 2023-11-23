@@ -1,0 +1,184 @@
+@use "./reset";
+
+.attribution {
+  width: 100%;
+  height: 100vh;
+  padding: 150px 0px;
+  background-color: #ecf2ff;
+}
+
+.resultCard {
+  width: 736px;
+  height: 512px;
+  border-radius: 32px;
+  margin: auto;
+  display: flex;
+  background-color: white;
+}
+
+.result {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+  background: linear-gradient(180deg, #2f2ce9, #6943ff);
+  color: white;
+  padding: 45px;
+  border-radius: 32px;
+
+  h2 {
+    color: #cac9ff;
+  }
+
+  .score-explainBox {
+    margin-top: 45px;
+
+    p {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .scoreExplanation {
+      margin-top: 35px;
+      color: #cac9ff;
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
+  }
+}
+
+.score-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #4d21c9, #4f4ce8);
+  margin: auto;
+  margin-top: 45px;
+  position: relative;
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+    font-weight: bold;
+
+    p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #cac9ff;
+    }
+  }
+}
+
+.result > h2,
+.summary > h2 {
+  font-size: 2em;
+}
+
+.summary {
+  width: 50%;
+  flex: 1;
+  padding: 45px;
+
+  h2 {
+    text-align: left;
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+
+    li {
+      width: 100%;
+      height: 56px;
+      border-radius: 12px;
+      margin-top: 15px;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0px 10px;
+      p{
+        font-size: 1.5em;
+        margin-left: 16px;
+        color: gray;
+        span {
+            color: #303B59;
+
+            font-weight: bold;
+        }
+      }
+
+      p:nth-child(2){
+        flex : 1;
+        text-align: left;
+      }
+
+      
+    }
+
+    li:nth-child(1) {
+      margin-top: 0px;
+    }
+  }
+}
+
+.reaction {
+  color: red;
+  background: rgba(255, 250, 250, 1);
+}
+
+.memory {
+  color: #FFB21E;
+  background: rgba(255, 250, 250, 1);
+}
+
+.verbal {
+  color: #00bb8f;
+  background: rgba(245, 255, 245, 1);
+}
+
+.visual {
+  color: blue;
+  background: rgba(245, 245, 255, 1);
+}
+
+.btn {
+  width: 100%;
+  height: 56px;
+  border-radius: 128px;
+  margin-top: 48px;
+  color: white;
+  background-color: #303b59;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 760px) {
+  .attribution {
+    padding: 0;
+  }
+  .resultCard {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-width: 300px;
+  }
+
+  .result,
+  .summary {
+    width: 100%;
+  }
+
+  .result {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}
+
+
+.bold{
+    font-weight: bold;
+}
